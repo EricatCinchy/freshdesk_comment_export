@@ -4,5 +4,4 @@ You will need a .env file present in the directory with your Freshdesk API Key a
 
 Simply install Python dependencies and run using:
 
-pip3 install -r requirements.txt
-python3 app.py
+pip3 install -r requirements.txt && python3 app.py
