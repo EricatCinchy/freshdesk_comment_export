@@ -16,6 +16,7 @@ def connect_to_api():
     FD_URL = os.getenv('FD_URL') + "/api/v2/tickets/" + str(i) + "/conversations"
     FD_USR = os.getenv('FD_USERNAME')
     FD_PWD = os.getenv('FD_PWD')
+    print(FD_URL)
 
     response = requests.get(FD_URL, auth=(FD_USR, FD_PWD))
     # Process the response data
@@ -26,8 +27,8 @@ def connect_to_api():
     else:
         print("Error:", response.status_code)
 
-# Number of times to connect to the API
-num_connections = 5
+# Number of times to cnnect to the API
+num_connections = 16 # the lowest ticket number is 15
 
 # Connect to the API multiple times in a loop
 for i in range(num_connections):
